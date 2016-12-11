@@ -1,0 +1,25 @@
+<div>
+    <h1>Tutable App</h1>
+    
+    Login:
+    <br>
+    
+      <form class = "form-control" ng-submit="login()"> 
+        <input  ng-model = "username" type = "text" placeholder= "username">
+        <br> 
+        <input ng-model = "password" type = "password" placeholder = "password">
+        
+        <br>
+        <button class = "btn-primary" >Login </button>
+        <br>
+        <span ng-show="invalidFlag" class="invalid">Password too short<br></span>
+        <a>Forgot Password?</a>
+    </form>  
+    
+    <h2>Current Users:</h2>
+    <ul>
+      <li ng-repeat="user in users"><a>{{user.name}}</a>
+      <br>{{user.college}} - {{user.city}}</li>
+    </ul>    
+
+</div>
