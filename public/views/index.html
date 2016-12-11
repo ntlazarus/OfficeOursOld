@@ -4,9 +4,14 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width">
-<link href="https://netdna.bootstrapcdn.com/twitter-bootstrap/2.3.2/css/bootstrap-combined.min.css" rel="stylesheet" type="text/css" />
+<!-- Latest compiled and minified CSS -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
 
-<script src="https://netdna.bootstrapcdn.com/twitter-bootstrap/2.3.2/js/bootstrap.min.js"></script>
+<!-- Optional theme -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+
+<!-- Latest compiled and minified JavaScript -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
 <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.0/angular.min.js"></script>
 
 <!-- Controller -->
@@ -18,15 +23,45 @@
 <!-- CSS -->
 <link href="../assets/tutable.css" rel="stylesheet" type="text/css" />
 
-  <title>Tutable App</title>
+  <title>OfficeOurs</title>
 </head>
 <body ng-controller = "MainCtrl">
 
 <div class="container ">
-  <div class = "row title-header">
+  <div class = "row page-header title-header">
+   <span style="float: right; font-size: 12px;"><span class="glyphicon glyphicon-user"></span>&nbsp;amurali3</span>  
       <h1>OfficeOurs</h1>
-        <h3>Guided Practice. Redefined.</h3>      
+        <h3>Guided Practice. Redefined.</h3>    
+        
 
+  </div>
+<br>
+  <div class="row" style="width: 100%;">
+    
+      <div class = "col-md-6">
+        <div class="panel panel-default">
+            <div class="panel-heading">
+              <h3 class="panel-title">Tips</h3>
+            </div>
+            <div class="panel-body dashboard-box">
+              <ol class="breadcrumb" ng-repeat="tip in tips">{{tip}} <small> <button  class="btn btn-primary" style="float: right; padding: 2px; font-size: 9px;">Open</button> </small></ol>
+            </div>
+      </div>
+
+    </div>  
+
+    <div class = "col-md-6">
+          <div class="panel panel-default">
+              <div class="panel-heading">
+                <h3 class="panel-title">Global Requests <input type="text" class="form-inline" name="" placeholder="Search"></h3>
+              </div>
+              <div class="panel-body dashboard-box">
+                <ol class="breadcrumb" ng-repeat="tip in tips">{{tip}} <small> <button  class="btn btn-primary" style="float: right; padding: 2px; font-size: 9px;">Bid</button> </small></ol>
+              </div>
+        </div>
+
+      </div>  
+   
   </div>
 </div>
 

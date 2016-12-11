@@ -2,6 +2,12 @@
 	padding: 30px;
 	background-color: #0073a0;
 	color: white;
-	width: 100%;
+	
 	font-size: 35px;
+}
+
+.dashboard-box{
+
+	max-height: 200px;
+	overflow-y: auto;
 }
