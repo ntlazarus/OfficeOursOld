@@ -1,0 +1,14 @@
+<div class = "panel panel-default dashboard-box" >
+<div class="panel-heading"><span class="glyphicon glyphicon-calendar"></span>&nbsp;&nbsp;Upcoming Appointments</div>
+<span id="square" class = "tutor"></span>&nbsp;&nbsp;Tutor &nbsp;&nbsp;&nbsp;&nbsp;<span id="square" class = "tutee"></span>&nbsp;&nbsp;Tutee
+<div ng-repeat="appointment in appointments" class="panel" ng-class= "appointment.type"style="padding: 10px">
+	<a href="">{{appointment.user}}</a> - {{appointment.topic}}
+	<br>
+	<button class="btn small-button">Open</button>
+	<button class="btn small-button">Chat</button>
+	<button class="btn btn-warning small-button">Reschedule</button>
+	<button class="btn btn-danger small-button">Cancel</button>
+
+
+</div>
+</div>

@@ -11,3 +11,28 @@
 	max-height: 200px;
 	overflow-y: auto;
 }
+
+.small-button-right{
+	float: right; 
+	padding: 2px; 
+	font-size: 9px;
+}
+
+.small-button{
+	padding: 2px; 
+	font-size: 9px;
+}
+
+.tutee{
+	    background-color: rgba(51, 122, 183, 0.3);
+
+}
+
+.tutor{
+	background-color: #d6e9c6;
+}
+
+#square{
+	height: 12px;
+	width: 12px;
+}

@@ -19,6 +19,7 @@
 
 <!-- Directives -->
 <script type="text/javascript" src="/../directives/loginView.js"></script>
+<script type="text/javascript" src="/../directives/appointments.js"></script>
 
 <!-- CSS -->
 <link href="../assets/tutable.css" rel="stylesheet" type="text/css" />
@@ -44,7 +45,7 @@
               <h3 class="panel-title">Tips</h3>
             </div>
             <div class="panel-body dashboard-box">
-              <ol class="breadcrumb" ng-repeat="tip in tips">{{tip}} <small> <button  class="btn btn-primary" style="float: right; padding: 2px; font-size: 9px;">Open</button> </small></ol>
+              <ol class="breadcrumb" ng-repeat="tip in tips">{{tip}} <small> <button  class="btn btn-primary small-button-right" >Open</button> </small></ol>
             </div>
       </div>
 
@@ -53,16 +54,40 @@
     <div class = "col-md-6">
           <div class="panel panel-default">
               <div class="panel-heading">
-                <h3 class="panel-title">Global Requests <input type="text" class="form-inline" name="" placeholder="Search"></h3>
+                <h3 class="panel-title">Global Requests <input type="text" class="form-inline" ng-model="className" name="" placeholder="Search"></h3>
               </div>
               <div class="panel-body dashboard-box">
-                <ol class="breadcrumb" ng-repeat="tip in tips">{{tip}} <small> <button  class="btn btn-primary" style="float: right; padding: 2px; font-size: 9px;">Bid</button> </small></ol>
+                <ol class="breadcrumb" ng-repeat="class in classes | filter: className">{{class}} <small> <button  class="btn btn-primary  small-button-right">Bid</button> </small></ol>
               </div>
         </div>
 
       </div>  
    
   </div>
+  <div class="row">
+
+    <button class="btn btn-success">Create Request</button>
+    
+  </div>
+
+  <br>
+
+  <div class="row">
+
+    <appointments class="col-md-6"></appointments>
+    <div class="col-md-6">
+      <div class="panel panel-default">
+              <div class="panel-heading">
+                Global/Direct Requests
+              </div>
+              <div class="panel-body dashboard-box">
+                <ol class="breadcrumb" >Values </ol>
+              </div>
+      </div>
+    </div>
+    
+  </div>
+
 </div>
 
 
