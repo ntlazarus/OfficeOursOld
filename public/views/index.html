@@ -4,22 +4,36 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width">
+
+  <!-- Bower -->
+<script src="/../../../bower_components/angular/angular.min.js"></script>
+<script src="/../../../bower_components/angular-bootstrap/ui-bootstrap-tpls.min.js"></script>
+<script src="/../../../bower_components/angular-animate/angular-animate.min.js"></script>
+<script src="/../../../bower_components/angular-touch/angular-touch.min.js"></script>
 <!-- Latest compiled and minified CSS -->
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
 
 <!-- Optional theme -->
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
 
+
 <!-- Latest compiled and minified JavaScript -->
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
-<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.0/angular.min.js"></script>
+<!-- <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.0/angular.min.js"></script> -->
 
 <!-- Controller -->
 <script type="text/javascript" src="/../controllers/MainCtrl.js"></script>
+<script type="text/javascript" src="/../controllers/bidCtrl.js"></script>
 
 <!-- Directives -->
 <script type="text/javascript" src="/../directives/loginView.js"></script>
 <script type="text/javascript" src="/../directives/appointments.js"></script>
+<script type="text/javascript" src="/../directives/bidPartial.js"></script>
+
+
+
+
+
 
 <!-- CSS -->
 <link href="../assets/tutable.css" rel="stylesheet" type="text/css" />
@@ -57,7 +71,12 @@
                 <h3 class="panel-title">Global Requests <input type="text" class="form-inline" ng-model="className" name="" placeholder="Search"></h3>
               </div>
               <div class="panel-body dashboard-box">
-                <ol class="breadcrumb" ng-repeat="class in classes | filter: className">{{class}} <small> <button  class="btn btn-primary  small-button-right">Bid</button> </small></ol>
+                <ol class="breadcrumb" ng-repeat="class in classes | filter: className">
+                  <a ng-click="class.viewDetails=!class.viewDetails" href="#">{{class.name}}</a> 
+                  <small> <button  ng-click="open(class)" class="btn btn-primary  small-button-right">Bid</button> </small>
+                  <br>
+                    <span ng-show="class.viewDetails">{{class.details}}</span>
+                  </ol>
               </div>
         </div>
 
@@ -90,7 +109,7 @@
 
 </div>
 
-
+<script type="text/ng-template" id="bidView.html"><div><bid-partial></bid-partial></div></script>
 
 </body>
 </html>

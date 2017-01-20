@@ -1,0 +1,16 @@
+{
+  "name": "tutable_nahum",
+  "homepage": "https://github.com/nrabindra/OfficeOurs",
+  "authors": [
+    "Nikhil Rabindra <nikhil.rabindra@gmail.com>"
+  ],
+  "description": "front end packages",
+  "main": "bower.json",
+  "license": "MIT",
+  "private": true,
+  "dependencies": {
+    "angular-animate": "^1.6.1",
+    "angular-bootstrap": "^2.4.0",
+    "angular-touch": "^1.6.1"
+  }
+}

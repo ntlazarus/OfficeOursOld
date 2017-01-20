@@ -1,0 +1,25 @@
+{
+  "name": "tutable_nahum",
+  "version": "1.0.0",
+  "description": "POC version",
+  "main": "server.js",
+  "dependencies": {
+    "express": "^4.14.0",
+    "angular-ui-bootstrap": "^2.4.0"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "test",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/nrabindra/OfficeOurs.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/nrabindra/OfficeOurs/issues"
+  },
+  "homepage": "https://github.com/nrabindra/OfficeOurs#readme"
+}
