@@ -1,3 +1,8 @@
+.bid-body{
+	padding: 10px;
+}
+
+
 .title-header{
 	padding: 30px;
 	background-color: #0073a0;
@@ -8,7 +13,7 @@
 
 .dashboard-box{
 
-	max-height: 200px;
+	max-height: 300px;
 	overflow-y: auto;
 }
 

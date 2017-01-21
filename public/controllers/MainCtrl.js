@@ -44,7 +44,7 @@ app.controller("MainCtrl", ['$scope', '$uibModal', function($scope, $uibModal) {
     var modalInstance = $uibModal.open({
       templateUrl: 'bidView.html',
       controller: 'bidCtrl',
-      size: "lg",
+      size: "md",
       resolve: {
         classObj: function () {
           return classObj;

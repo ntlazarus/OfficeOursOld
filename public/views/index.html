@@ -29,6 +29,8 @@
 <script type="text/javascript" src="/../directives/loginView.js"></script>
 <script type="text/javascript" src="/../directives/appointments.js"></script>
 <script type="text/javascript" src="/../directives/bidPartial.js"></script>
+<script type="text/javascript" src="/../directives/globalRequests.js"></script>
+<script type="text/javascript" src="/../directives/pendingRequests.js"></script>
 
 
 
@@ -44,7 +46,7 @@
 
 <div class="container ">
   <div class = "row page-header title-header">
-   <span style="float: right; font-size: 12px;"><span class="glyphicon glyphicon-user"></span>&nbsp;amurali3</span>  
+   <span style="float: right; font-size: 12px;"><span class="glyphicon glyphicon-user"></span><span>&nbsp;amurali3</span>&nbsp;&nbsp;Tips</span>  
       <h1>OfficeOurs</h1>
         <h3>Guided Practice. Redefined.</h3>    
         
@@ -52,8 +54,8 @@
   </div>
 <br>
   <div class="row" style="width: 100%;">
-    
-      <div class = "col-md-6">
+    <pending-requests class="col-md-6"></pending-requests>
+   <!--    <div class = "col-md-6">
         <div class="panel panel-default">
             <div class="panel-heading">
               <h3 class="panel-title">Tips</h3>
@@ -63,24 +65,8 @@
             </div>
       </div>
 
-    </div>  
-
-    <div class = "col-md-6">
-          <div class="panel panel-default">
-              <div class="panel-heading">
-                <h3 class="panel-title">Global Requests <input type="text" class="form-inline" ng-model="className" name="" placeholder="Search"></h3>
-              </div>
-              <div class="panel-body dashboard-box">
-                <ol class="breadcrumb" ng-repeat="class in classes | filter: className">
-                  <a ng-click="class.viewDetails=!class.viewDetails" href="#">{{class.name}}</a> 
-                  <small> <button  ng-click="open(class)" class="btn btn-primary  small-button-right">Bid</button> </small>
-                  <br>
-                    <span ng-show="class.viewDetails">{{class.details}}</span>
-                  </ol>
-              </div>
-        </div>
-
-      </div>  
+    </div>   -->
+    <global-requests  class="col-md-6"></global-requests>
    
   </div>
   <div class="row">
