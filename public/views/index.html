@@ -32,6 +32,7 @@
 <script type="text/javascript" src="/../directives/globalRequests.js"></script>
 <script type="text/javascript" src="/../directives/pendingRequests.js"></script>
 <script type="text/javascript" src="/../directives/createRequest.js"></script>
+<script type="text/javascript" src="/../directives/currentRequest.js"></script>
 
 
 
@@ -46,6 +47,8 @@
 </head>
 <body ng-controller = "MainCtrl">
 <create-request ng-show="navigation.CreateRequest.flag"></create-request>
+<current-request ng-show="navigation.Request.flag"></current-request>
+
 <div class="container " ng-show="navigation.Home.flag">
   <div class = "row page-header title-header">
    <span style="float: right; font-size: 12px;"><span class="glyphicon glyphicon-user"></span><span>&nbsp;amurali3</span>&nbsp;&nbsp;Tips</span>  

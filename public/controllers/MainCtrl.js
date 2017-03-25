@@ -20,7 +20,7 @@ app.controller("MainCtrl", ['$scope', '$uibModal', function($scope, $uibModal) {
 
   $scope.appointments = [{"user": "nlazarus3", "topic": "Entrepreneurship for South Africans", "type": "tutee"},
   						 {"user": "alazarus3", "topic": "Beer Pong Trash Talk - Advanced", "type": "tutee"},
-  						 {"user": "pmohoni3", "topic": "Feel Good Blogging", "type": "tutor"},
+  						 {"user": "lovelola", "topic": "Feel Good Blogging", "type": "tutor"},
   						 {"user": "amurali3", "topic": "Body Boot Camp", "type": "tutor"},
   						 {"user": "nrabindra3", "topic": "Know Your IPA", "type": "tutor"}];
 
@@ -33,10 +33,33 @@ $scope.navigation = {
                       },
                       CreateRequest: {
                         flag: false
+                      },
+                      Request: {
+                        flag: false
                       }        
 };
 
+
+$scope.submitRequest = function(){
+
+
+    var request = {name: $scope.createRequest.title,
+                  };
+
+      $scope.classes.push(request);
+
+    $scope.navigate('Home');
+};
+
 $scope.navigate = function(page){
+
+  $scope.createRequest = {
+    title: "",
+    discipline: "",
+    tags: "",
+    description: "",
+    budget: ""
+  }; 
 
     for(var key in $scope.navigation){
       
@@ -78,6 +101,13 @@ $scope.navigate = function(page){
         }
       }
     });
+
+
+    $scope.viewRequest = function(index){
+      console.log(index);
+      $scope.currentRequest = $scope.classes[index];
+      $scope.navigate('Request');
+    };
 
     modalInstance.result.then(function (selectedItem) {
       $scope.selected = selectedItem;
