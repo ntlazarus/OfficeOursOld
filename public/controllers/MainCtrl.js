@@ -27,6 +27,33 @@ app.controller("MainCtrl", ['$scope', '$uibModal', function($scope, $uibModal) {
 
 
 
+$scope.navigation = {
+                      Home: {
+                        flag: true
+                      },
+                      CreateRequest: {
+                        flag: false
+                      }        
+};
+
+$scope.navigate = function(page){
+
+    for(var key in $scope.navigation){
+      
+
+      if(key == page){
+
+        $scope.navigation[key].flag = true;
+        console.log($scope.navigation[key]);
+      }
+      else{
+        $scope.navigation[key].flag = false;
+      }
+    }
+
+    
+}
+
   $scope.checkType = function(type){
 
   	if(type=="tutor"){

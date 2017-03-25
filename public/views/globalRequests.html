@@ -5,7 +5,7 @@
               <div class="panel-body dashboard-box">
                 <ol class="breadcrumb" ng-repeat="class in classes | filter: className">
                   <a ng-click="class.viewDetails=!class.viewDetails" href="#">{{class.name}}</a> 
-                  <small> <button  ng-click="open(class)" class="btn btn-primary  small-button-right">Bid</button> </small>
+                  <small> <button  ng-click="open(class)" class="btn btn-primary  small-button-right">View</button> </small>
                   <br>
                     <span ng-show="class.viewDetails">{{class.details}}</span>
                   </ol>

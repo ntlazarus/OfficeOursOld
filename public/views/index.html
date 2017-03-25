@@ -31,6 +31,8 @@
 <script type="text/javascript" src="/../directives/bidPartial.js"></script>
 <script type="text/javascript" src="/../directives/globalRequests.js"></script>
 <script type="text/javascript" src="/../directives/pendingRequests.js"></script>
+<script type="text/javascript" src="/../directives/createRequest.js"></script>
+
 
 
 
@@ -43,8 +45,8 @@
   <title>OfficeOurs</title>
 </head>
 <body ng-controller = "MainCtrl">
-
-<div class="container ">
+<create-request ng-show="navigation.CreateRequest.flag"></create-request>
+<div class="container " ng-show="navigation.Home.flag">
   <div class = "row page-header title-header">
    <span style="float: right; font-size: 12px;"><span class="glyphicon glyphicon-user"></span><span>&nbsp;amurali3</span>&nbsp;&nbsp;Tips</span>  
       <h1>OfficeOurs</h1>
@@ -54,6 +56,7 @@
   </div>
 <br>
   <div class="row" style="width: 100%;">
+
     <pending-requests class="col-md-6"></pending-requests>
    <!--    <div class = "col-md-6">
         <div class="panel panel-default">
@@ -71,7 +74,7 @@
   </div>
   <div class="row">
 
-    <button class="btn btn-success">Create Request</button>
+    <button class="btn btn-success"  ng-click="navigate('CreateRequest')">Create Request</button>
     
   </div>
 
